@@ -1,2 +1,2 @@
 # VirtualPet
-A unity Project that the virtual pet could respond with you
+A unity Project that the virtual pet could respond to you
