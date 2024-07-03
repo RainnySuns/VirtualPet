@@ -861,8 +861,11 @@
         {
             "Path": [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "Assets/Samples/WEART SDK/1.1.0/Haptic Hands/Scenes/HapticHandsDemo.unity"
 =======
+=======
+>>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
                 "Assets/Scenes/Spring/Spring.unity"
             ],
             "ApplyMenu": false,
@@ -3112,6 +3115,9 @@
         {
             "Path": [
                 "Assets/WEART_Samples/SampleDemo/Scenes/PlaygroundDemo.unity"
+<<<<<<< HEAD
+>>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
+=======
 >>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
             ],
             "ApplyMenu": false,

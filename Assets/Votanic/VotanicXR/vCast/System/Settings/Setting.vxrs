@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Format": "Setting",
   "Version": "2020.8.10",
   "Scene": {
@@ -3761,6 +3762,8 @@
   "ScenesInBuild": [
   ]
 =======
+=======
+>>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
     "Format": "Setting",
     "Version": "2020.8.10",
     "Scene": {
@@ -7434,5 +7437,8 @@
         ]
     },
     "ScenesInBuild": []
+<<<<<<< HEAD
+>>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
+=======
 >>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
 }
