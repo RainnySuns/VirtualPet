@@ -17,7 +17,7 @@ Shader "Roystan/Tessellation Example"
 			#pragma target 4.6
 			
 			#include "UnityCG.cginc"
-			#include "D:\Unity\Test 2020\Assets\Scenes\Summer\material\shader\CustomTessellation.cginc"
+			#include ".\CustomTessellation.cginc"
 
 			// Define custom vertex and domain shaders that transform the 
 			// outputted vertex to clip space; in the CustomTessellation file,

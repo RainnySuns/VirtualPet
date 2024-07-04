@@ -17,6 +17,7 @@ public class TestPosition : MonoBehaviour
         if (vGear.hand != null)
         {
             transform.position = vGear.hand.position;
+
             transform.rotation = vGear.hand.rotation;
         }
     }
