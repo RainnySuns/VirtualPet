@@ -1243,6 +1243,428 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRAxes">
+            <summary>
+            The axes class of UnityXR.
+            <br></br> UnityXR 軸群類別。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRAxes.AxisValue(System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return the value of an axis.
+            <br></br> 傳回一個軸的值。
+            <para> AxisValue(0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRButtons">
+            <summary>
+            The buttons class of UnityXR.
+            <br></br> UnityXR 按鈕群類別。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRButtons.ButtonPress(System.Int32,System.Boolean)">
+            <summary>
+            Return true if the button is pressing.
+            <br></br> 當按鈕按住時傳回 true。
+            <para> ButtonPress(0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRButtons.ButtonTouch(System.Int32,System.Boolean)">
+            <summary>
+            Return true if the button is touched.
+            <br></br> 當按鈕被觸碰時傳回 true。
+            <para> ButtonTouch(0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRDevice">
+            <summary>
+            The device class of UnityXR which may contains Buttons, Axes and Tracker.
+            <br></br> UnityXR 裝置類別，可包含按鈕群、軸群及定位器。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRDevice.id">
+            <summary>
+            The device ID of UnityXR. <br></br> UnityXR 裝置識別編碼。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDevice.type">
+            <summary>
+            Type of UnityXR Device. <br></br> UnityXR 裝置的類型。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRDevice.buttons">
+            <summary>
+            Buttons of device. <br></br>裝置的按鈕群。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRDevice.axes">
+            <summary>
+            Axes of device. <br></br> 裝置的軸群。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRDevice.tracker">
+            <summary>
+            Tracker of device. <br></br> 裝置的定位器。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRDevice.BindAddress(System.String)">
+            <summary>
+            Bind an address to OpenVR device.
+            <br></br> 為 OpenVR 裝置綁定位址。
+            <para> BindAddress("Hand") </para>
+            </summary>
+            <param name="address"> Address for finding device <br></br> 用作搜尋裝置的位址 </param>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRDevice.Vibrate(System.Single,System.Single)">
+            <summary>
+            Vibrate the device.
+            <br></br> 使裝置震動。
+            <para> Vibrate() </para>
+            </summary>
+            <param name="duration"> Vibrate seconds <br></br> 震動秒數 </param>
+            <param name="ampitude"> Ampitude of vibration <br></br> 震動幅度 </param>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRDeviceType">
+            <summary>
+            Type of UnityXR Device.
+            <br></br> UnityXR 裝置的類型。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.Unknown">
+            <summary>
+            Unknown type. <br></br> 不明類型。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.HMD">
+            <summary>
+            HMD. <br></br> 頭戴式裝置。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.RightHand">
+            <summary>
+            Right hand controller. <br></br> 右手控制器。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.LeftHand">
+            <summary>
+            Left hand controller. <br></br> 左手控制器。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.Controller">
+            <summary>
+            Other controller. <br></br> 其他控制器。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRDeviceType.Tracker">
+            <summary>
+            Vive tracker. <br></br> Vive 定位器。
+            </summary>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRActionReference">
+            <summary>
+            Input Action Reference group of an UnityXR Device.
+            <br></br> UnityXR 裝置的輸入動作參考群組。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRActionReference.type">
+            <summary>
+            Type of UnityXR Device. <br></br> UnityXR 裝置的類型。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRActionReference.buttons">
+            <summary>
+            List of button action. <br></br> 按鈕動作列表。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRActionReference.axes">
+            <summary>
+            List of axis action. <br></br> 軸動作列表。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRActionReference.trackers">
+            <summary>
+            List of tracker action. <br></br> 定位器動作列表。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRActionReference.haptic">
+            <summary>
+            Haptic action. <br></br> 震動動作。
+            </summary>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRHandler">
+            <summary>
+            Handling UnityXR deivces.
+            <br></br> 處理 UnityXR 裝置。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRHandler.needRefresh">
+            <summary>
+            The system is needed to refresh if true. <br></br> 當 true 時代表系統需要刷新。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRHandler.devices">
+            <summary>
+            The UnityXR devices scanned. <br></br> 已掃瞄的 UnityXR 裝置。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRHandler.controllers">
+            <summary>
+            The UnityXR avaliable controllers. <br></br> 可用的 UnityXR 控制器。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.#ctor(System.Single,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Declare the UnityXR handler.
+            <br></br> 宣告 UnityXR 處理器。
+            </summary>
+            <param name="axesDeadZone"> Dead zone of axes <br></br> 軸群的死區 </param>
+            <param name="axesPressDetect"> Press detect value of axes <br></br> 軸群的按下偵測值 </param>
+            <param name="holdingDuration"> Holding seconds of hold input type <br></br> 長按輸入類型的長按秒數 </param>
+            <param name="onStartButtonDown"> Allow Button Down work on start <br></br> 允許按鈕按下在開始時作用 </param>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ScanDevice">
+            <summary>
+            Scan UnityXR device on the system.
+            <br></br> 掃瞄系統中的 UnityXR 裝置。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.Update">
+            <summary>
+            Update the current state of devices.
+            <br></br> 更新裝置目前狀態。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.Dispose">
+            <summary>
+            Release UnityXR when stop application.
+            <br></br> 當停止應用程式時釋放 UnityXR。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ButtonPress(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return true if a button on controller is pressing.
+            <br></br> 當控制器的按鈕按住時傳回 true。
+            <para> ButtonPress(0, 0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ButtonDown(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return true if a button on controller is pressed.
+            <br></br> 當控制器的按鈕按下時傳回 true。
+            <para> ButtonDown(0, 0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ButtonUp(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return true if a button on controller is released.
+            <br></br> 當控制器的按鈕放開時傳回 true。
+            <para> ButtonUp(0, 0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ButtonHold(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return true if a button on controller is held for a while.
+            <br></br> 當控制器的按鈕長按一段時間時傳回 true。
+            <para> ButtonHold(0, 0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.ButtonTouch(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return true if a button on controller is touched.
+            <br></br> 當控制器的按鈕被觸碰時傳回 true。
+            <para> ButtonTouch(0, 0) </para>
+            </summary>
+            <param name="index"> Button index <br></br> 按鈕編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse the result if true <br></br> 當 true 時反轉結果 </param>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.AxisValue(System.Int32,System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return the value of an axis on controller.
+            <br></br> 傳回控制器的一個軸的值。
+            <para> AxisValue(0, 0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.AxisPress(System.Int32,Votanic.vIO.AxisDirection,System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return true if an axis on controller is pressing (Absolute axis value &gt;= Press detect value).
+            <br></br> 當控制器的軸按住時傳回 true（軸絕對值 &gt;= 按下偵測值）。
+            <para> AxisPress(0, AxisDirection.Positive, 0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="direction"> The axis pressing direction <br></br> 軸按住的方向 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.AxisDown(System.Int32,Votanic.vIO.AxisDirection,System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return true if an axis on controller is pressed (Absolute axis value &gt;= Press detect value).
+            <br></br> 當控制器的軸按下時傳回 true（軸絕對值 &gt;= 按下偵測值）。
+            <para> AxisDown(0, AxisDirection.Positive, 0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="direction"> The axis pressing direction <br></br> 軸按住的方向 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.AxisUp(System.Int32,Votanic.vIO.AxisDirection,System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return true if an axis on controller is released (Absolute release value &gt;= Press detect value).
+            <br></br> 當控制器的軸放開時傳回 true（釋放絕對值 &gt;= 按下偵測值）。
+            <para> AxisUp(0, AxisDirection.Positive, 0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="direction"> The axis pressing direction <br></br> 軸按住的方向 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.AxisHold(System.Int32,Votanic.vIO.AxisDirection,System.Int32,System.Boolean,Votanic.vIO.AssistButtons)">
+            <summary>
+            Return true if an axis on controller is held for a while (Absolute axis value &gt;= Press detect value).
+            <br></br> 當控制器的軸長按一段時間時傳回 true（軸絕對值 &gt;= 按下偵測值）。
+            <para> AxisHold(0, AxisDirection.Positive, 0) </para>
+            </summary>
+            <param name="index"> Axis index <br></br> 軸編號 </param>
+            <param name="direction"> The axis pressing direction <br></br> 軸按住的方向 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+            <param name="reversed"> Reverse axis value if true <br></br> 當 true 時反轉軸值 </param>
+            <param name="assistButtons"> Assist buttons <br></br> 輔助按鈕 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.Vibrate(System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            Vibrate a controller.
+            <br></br> 使控制器震動。
+            <para> Vibrate(0.1f, 0) </para>
+            </summary>
+            <param name="duration"> Vibrate seconds <br></br> 震動秒數 </param>
+            <param name="ampitude"> Ampitude of vibration <br></br> 震動幅度 </param>
+            <param name="frequency"> Frequency of vibration <br></br> 震動頻率 </param>
+            <param name="controller"> Controller index <br></br> 控制器編號 </param>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.TrackerAccessible(System.String)">
+            <summary>
+            Return true if the tracker is accessible.
+            <br></br> 當定位器可讀取時傳回 true。
+            <para> TrackerAccessible("Valve Controller") </para>
+            </summary>
+            <param name="name"> Tracker name  <br></br> 定位器名稱 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.TrackerPosition(System.String)">
+            <summary>
+            Get the position of tracker in system.
+            <br></br> 取得系統中的定位器位置。
+            <para> TrackerPosition("Valve Controller") </para>
+            </summary>
+            <param name="name"> Tracker name  <br></br> 定位器名稱 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRHandler.TrackerRotation(System.String)">
+            <summary>
+            Get the rotation of tracker in system.
+            <br></br> 取得系統中的定位器角度。
+            <para> TrackerRotation("Valve Controller") </para>
+            </summary>
+            <param name="name"> Tracker name  <br></br> 定位器名稱 </param>
+            <returns></returns>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRManager">
+            <summary>
+            Managing UnityXR deivces.
+            <br></br> 管理 UnityXR 裝置。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRManager.axesDeadZone">
+            <summary>
+            Default dead zone of axes. <br></br> 軸群預設死區。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRManager.axesPressDetect">
+            <summary>
+            Default press detect value of axes. <br></br> 軸群預設按下偵測值。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRManager.holdingDuration">
+            <summary>
+            Default holding seconds of hold input type. <br></br> 預設長按輸入類型的長按秒數。
+            </summary>
+        </member>
+        <member name="F:Votanic.vIO.UnityXR.UnityXRManager.onStartButtonDown">
+            <summary>
+            Allow Button Down work on start. <br></br> 允許按鈕按下在開始時作用。
+            </summary>
+        </member>
+        <member name="P:Votanic.vIO.UnityXR.UnityXRManager.Input">
+            <summary>
+            The handler of UnityXR.
+            <br></br> UnityXR 處理器。
+            </summary>
+        </member>
+        <member name="T:Votanic.vIO.UnityXR.UnityXRTracker">
+            <summary>
+            The tracker class of UnityXR.
+            <br></br> UnityXR 定位器類別。
+            </summary>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRTracker.Accessible">
+            <summary>
+            Return true if the tracker is accessible.
+            <br></br> 當定位器可讀取時傳回 true。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRTracker.Position">
+            <summary>
+            Get the position of tracker in system.
+            <br></br> 取得系統中的定位器位置。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Votanic.vIO.UnityXR.UnityXRTracker.Rotation">
+            <summary>
+            Get the rotation of tracker in system.
+            <br></br> 取得系統中的定位器旋轉。
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Votanic.vIO.VInput.VInputAxes">
             <summary>
             The axes class of VInput.

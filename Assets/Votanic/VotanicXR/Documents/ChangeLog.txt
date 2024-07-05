@@ -1,3 +1,56 @@
+============================================ 2020.9.9 (20240618) =============================================
+[vCast - 2020.9.9]	
+1.	DOME FOV can be edited now
+	現在可以調整 DOME 的 FOV
+2.	Fixed HMD controller angle issue in XRCC
+	修正 XRCC 的 HMD 控制器角度問題
+3.	Fixed Config file nodes order issue
+	修正配置檔案節點次序問題
+
+============================================ 2020.9.8 (20240516) =============================================
+[vCast - 2020.9.8]	
+1.	Updated default config & settting
+	更新預設的配置和設定
+2.	Allow unlicensed user to set bigger resolution
+	允許沒有憑證的使用者設定更大的解像度
+3.	Added Cursor Tool
+	新增鼠標工具
+4.	Added Set Previous Tool API for controller
+	新增控制器設定先前工具的 API
+5.	Updated Floor function in some cases
+	更新了地面物件在某些情況下的功能
+6.	Interactables layer will not be changed if the layer is UI
+	當交互物的圖層為 UI 時不會被變更
+7.	Fixed Projection Simulation error on execution
+	修正由投影模擬功能引起的執行檔問題
+
+============================================ 2020.9.7 (20240404) =============================================
+[vIO - 2020.9.7]	
+1.	Increase the number of axis of Arduino devices
+	增加 Arduino 裝置的軸數量
+
+[vCast - 2020.9.7]	
+1.	Entity can disable it's own Screen Warning
+	實體能單獨取消其屏幕警告
+2.	Added OnReceivedCommand action to command system
+	新增 OnReceivedCommand 動作至指令系統
+3.	Updated Floor function in some cases
+	更新了地面物件在某些情況下的功能
+
+============================================ 2020.9.6 (20240112) =============================================
+[vCast - 2020.9.6]	
+1.	Fixed License issue
+	修正 License 的問題
+
+[PointCloud - 2020.9.2]	
+1.	Fixed 2gb pcroot file size issue
+	修正 PCRoot 檔案大於 2gb 的問題
+
+============================================ 2020.9.5 (20231218) =============================================
+[vCast - 2020.9.5]	
+1.	User can customize the gravity
+	用家可自行定義重力
+
 ============================================ 2020.9.4 (20231108) =============================================
 [vIO - 2020.9.4]	
 1.	Fixed some backend initialization issues
@@ -1480,7 +1533,7 @@
 
 ============================================= 2020.1.1 (20200401) =============================================
 [vCast - 2020.1.1]	
-1.	Added Ground and Wall components to Menu Bar
+1.	Added Floor and Wall components to Menu Bar
 	新增地面及牆壁組件於選單欄
 2.	Updated license validate function
 	更新許可驗證功能
@@ -1567,7 +1620,7 @@
 	過場器可自定義使用
 21. Interactables will automatically added box collider if no collider is detected on create
 	交互物將會在創造後沒有碰撞器的情況下自動生成碰撞器
-22.	Updated no ground setting of user
+22.	Updated no floor setting of user
 	更新使用者的無地面設定
 23.	Added Left and Right vCast layers for hiding single eye objects
 	新增左右眼 vCast 層級以隱藏單眼物件
@@ -1722,7 +1775,7 @@
 	新增退出按鈕於內置選單
 4.	Added ignore layers settings for camera entity on config file
 	在配置文件為相機實體新增無視層級設定
-5.	Added zero height as ground setting for user on setting file
+5.	Added zero height as floor setting for user on setting file
 	在設置文件為使用者新增高度零為地面設定
 	
 [vArch - 1.1.0]	

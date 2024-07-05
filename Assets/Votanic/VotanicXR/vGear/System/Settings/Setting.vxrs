@@ -1,6 +1,6 @@
 {
     "Format": "Setting",
-    "Version": "2020.8.10",
+    "Version": "2020.9.8",
     "Scene": {
         "Attribute": {
             "Traveler": true,
@@ -36,25 +36,11 @@
             "StartPosition": [
                 0.0,
                 0.0,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 0.0
             ],
             "StartRotation": [
                 0.0,
                 0.0,
-=======
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-                0.6700000166893005
-            ],
-            "StartRotation": [
-                0.0,
-                180.0,
-<<<<<<< HEAD
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
                 0.0
             ],
             "Transition": {
@@ -175,6 +161,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -278,7 +265,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             29,
@@ -300,6 +288,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 2.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -425,6 +414,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -528,7 +518,8 @@
                         "ScanLength": 0.20000000298023225,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             29,
@@ -550,6 +541,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.20000000298023225,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -673,6 +665,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -776,7 +769,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             26,
@@ -798,6 +792,7 @@
                             "Interactive": true,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.5,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -901,7 +896,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             31
@@ -921,6 +917,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.10000000149011612,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -1024,7 +1021,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             31
@@ -1044,6 +1042,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.30000001192092898,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -1147,7 +1146,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             31
@@ -1167,6 +1167,7 @@
                             "Interactive": false,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.30000001192092898,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -1270,7 +1271,8 @@
                         "ScanLength": 3.0,
                         "PriorityLayer": false,
                         "DetectLayer": [
-                            28
+                            28,
+                            5
                         ],
                         "IgnoreLayer": [
                             29,
@@ -1292,9 +1294,137 @@
                             "Interactive": true,
                             "Display": false,
                             "ApplyLaserPointer": true,
+                            "ApplyCursor": false,
                             "Length": 550.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
+                            "NormalDisplay": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            "SelectDisplay": [
+                                0.0,
+                                1.0,
+                                0.0,
+                                1.0,
+                                0.25
+                            ],
+                            "PressDisplay": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.25
+                            ],
+                            "DisableDisplay": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.5,
+                                0.0
+                            ],
+                            "Position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "Rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        "Glove": {
+                            "Interactive": false,
+                            "Display": false,
+                            "NormalOutline": {
+                                "Enable": false,
+                                "Color": [
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "Width": 0.0,
+                                "Mode": "OutlineAll"
+                            },
+                            "SelectOutline": {
+                                "Enable": true,
+                                "Color": [
+                                    0.0,
+                                    1.0,
+                                    0.0,
+                                    0.5
+                                ],
+                                "Width": 5.0,
+                                "Mode": "OutlineAll"
+                            },
+                            "PressOutline": {
+                                "Enable": true,
+                                "Color": [
+                                    1.0,
+                                    0.0,
+                                    0.0,
+                                    0.5
+                                ],
+                                "Width": 5.0,
+                                "Mode": "OutlineAll"
+                            },
+                            "Position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "Rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "Offset": [
+                                -0.02500000037252903,
+                                -0.029999999329447748,
+                                -0.05000000074505806
+                            ],
+                            "Radius": 0.10000000149011612
+                        }
+                    },
+                    {
+                        "Name": "Cursor",
+                        "AutoSwitch": false,
+                        "EnableScan": false,
+                        "ScanLength": 100.0,
+                        "PriorityLayer": true,
+                        "DetectLayer": [
+                            5,
+                            28
+                        ],
+                        "IgnoreLayer": [
+                            29,
+                            30,
+                            31
+                        ],
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "Rotation": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "WandRay": {
+                            "Enable": true,
+                            "Interactive": true,
+                            "Display": false,
+                            "ApplyLaserPointer": false,
+                            "ApplyCursor": true,
+                            "Length": 100.0,
+                            "RenderQueue": 3000,
+                            "AlwaysOnTop": true,
                             "NormalDisplay": [
                                 1.0,
                                 1.0,
@@ -1519,8 +1649,6 @@
                     {
                         "Default": false,
                         "ButtonsName": [
-                            "VRPNButtons1",
-                            "VRPNButtons2",
                             "Vive Controller.Buttons",
                             "Vive Controller - 2.Buttons"
                         ],
@@ -1546,6 +1674,8 @@
                     {
                         "Default": false,
                         "ButtonsName": [
+                            "VRPNButtons1",
+                            "VRPNButtons2",
                             "Valve Right Controller.Buttons",
                             "Valve Left Controller.Buttons"
                         ],
@@ -1749,8 +1879,6 @@
                     {
                         "Default": false,
                         "AxesName": [
-                            "VRPNAxes1",
-                            "VRPNAxes2",
                             "Vive Controller.Axes",
                             "Vive Controller - 2.Axes"
                         ],
@@ -1795,6 +1923,8 @@
                     {
                         "Default": false,
                         "AxesName": [
+                            "VRPNAxes1",
+                            "VRPNAxes2",
                             "Valve Right Controller.Axes",
                             "Valve Left Controller.Axes"
                         ],
@@ -1989,6 +2119,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2114,6 +2245,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 2.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2239,6 +2371,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2364,6 +2497,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.20000000298023225,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2487,6 +2621,7 @@
                             "Interactive": false,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2612,6 +2747,7 @@
                             "Interactive": true,
                             "Display": false,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.5,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2735,6 +2871,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.10000000149011612,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2858,6 +2995,7 @@
                             "Interactive": true,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.30000001192092898,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -2981,6 +3119,7 @@
                             "Interactive": false,
                             "Display": true,
                             "ApplyLaserPointer": false,
+                            "ApplyCursor": false,
                             "Length": 0.30000001192092898,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -3106,6 +3245,7 @@
                             "Interactive": true,
                             "Display": false,
                             "ApplyLaserPointer": true,
+                            "ApplyCursor": false,
                             "Length": 500.0,
                             "RenderQueue": 3000,
                             "AlwaysOnTop": false,
@@ -8114,7 +8254,7 @@
         ],
         "Custom": [
             {
-                "Name": "CallUI",
+                "Name": "Pick11",
                 "Value": [
                     -1.0,
                     1.0
@@ -8129,9 +8269,9 @@
                         "Condition": [],
                         "InputDetail": [
                             {
-                                "Type": "ButtonDown",
+                                "Type": "MouseDown",
                                 "Key": [
-                                    "4"
+                                    "0"
                                 ],
                                 "Reversed": false,
                                 "AxesDirection": "Any",
@@ -8140,536 +8280,8 @@
                         ]
                     }
                 ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-            },
-            {
-                "Name": "OK",
-                "Value": [
-                    -1.0,
-                    1.0
-                ],
-                "Target": -1,
-                "Condition": [],
-                "Action": [
-                    {
-                        "Controller": -1,
-                        "Combo": false,
-                        "Count": 1,
-                        "Condition": [],
-                        "InputDetail": [
-                            {
-                                "Type": "ButtonUp",
-                                "Key": [
-                                    "3"
-                                ],
-                                "Reversed": false,
-                                "AxesDirection": "Any",
-                                "Device": "0"
-                            }
-                        ]
-                    }
-                ]
-<<<<<<< HEAD
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
             }
         ]
     },
-    "ScenesInBuild": [
-        {
-            "Path": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "Assets/Samples/WEART SDK/1.1.0/Haptic Hands/Scenes/HapticHandsDemo.unity"
-=======
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-                "Assets/Scenes/Spring/Spring.unity"
-            ],
-            "ApplyScene": false,
-            "ApplyDevice": false,
-            "ApplyCommand": false,
-            "Scene": {
-                "Attribute": {
-                    "Traveler": true,
-                    "Soul": false,
-                    "Debug": false,
-                    "Tracking": true,
-                    "Stereo": true,
-                    "Test3D": false
-                },
-                "Update": {
-                    "RefreshRate": 0.20000000298023225,
-                    "TargetFrameRate": 120
-                },
-                "Quality": {
-                    "ForceQuality": false,
-                    "Level": 0,
-                    "VSync": 0,
-                    "Rendering": {
-                        "LightCount": 1,
-                        "Anisotropic": "ForcedOn",
-                        "AntiAliasing": 8
-                    },
-                    "Shadows": {
-                        "Type": "Hard",
-                        "Resolution": "High",
-                        "Projection": "CloseFit",
-                        "Distance": 100.0,
-                        "NearPlaneOffset": 1.0,
-                        "Cascades": []
-                    }
-                },
-                "Frame": {
-                    "StartPosition": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "StartRotation": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Transition": {
-                        "Method": "",
-                        "Parameter": "Velocity",
-                        "TransitionFactor": 1.0,
-                        "AccelerationFactor": 0.0,
-                        "DecelerationFactor": 0.0,
-                        "RotationRatio": 45.0,
-                        "FadeColor": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "FadedDuration": 0.10000000149011612,
-                        "UnscaledDeltaTime": false
-                    }
-                },
-                "User": []
-            },
-            "Device": {
-                "GeneralInput": {
-                    "DeadZone": 0.14000000059604646,
-                    "PressDetect": 0.699999988079071,
-                    "HoldingDuration": 1.0
-                },
-                "Buttons": {
-                    "GeneralButtons": [],
-                    "VRPNButtons": []
-                },
-                "Axes": {
-                    "GeneralAxes": [],
-                    "VRPNAxes": []
-                },
-                "Tracker": {
-                    "VRPNTracker": []
-                },
-                "Controller": [],
-                "Sensor": []
-            },
-            "Command": {
-                "ComboTimeLimit": 0.25,
-                "CountTimeLimit": 0.25,
-                "Separator": "=,_|",
-                "BuiltIn": [],
-                "Custom": []
-            }
-        },
-        {
-            "Path": [
-                "Assets/Scenes/Fall/Fall.unity"
-            ],
-            "ApplyScene": false,
-            "ApplyDevice": false,
-            "ApplyCommand": false,
-            "Scene": {
-                "Attribute": {
-                    "Traveler": true,
-                    "Soul": false,
-                    "Debug": false,
-                    "Tracking": true,
-                    "Stereo": true,
-                    "Test3D": false
-                },
-                "Update": {
-                    "RefreshRate": 0.20000000298023225,
-                    "TargetFrameRate": 120
-                },
-                "Quality": {
-                    "ForceQuality": false,
-                    "Level": 0,
-                    "VSync": 0,
-                    "Rendering": {
-                        "LightCount": 1,
-                        "Anisotropic": "ForcedOn",
-                        "AntiAliasing": 8
-                    },
-                    "Shadows": {
-                        "Type": "Hard",
-                        "Resolution": "High",
-                        "Projection": "CloseFit",
-                        "Distance": 100.0,
-                        "NearPlaneOffset": 1.0,
-                        "Cascades": []
-                    }
-                },
-                "Frame": {
-                    "StartPosition": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "StartRotation": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Transition": {
-                        "Method": "",
-                        "Parameter": "Velocity",
-                        "TransitionFactor": 1.0,
-                        "AccelerationFactor": 0.0,
-                        "DecelerationFactor": 0.0,
-                        "RotationRatio": 45.0,
-                        "FadeColor": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "FadedDuration": 0.10000000149011612,
-                        "UnscaledDeltaTime": false
-                    }
-                },
-                "User": []
-            },
-            "Device": {
-                "GeneralInput": {
-                    "DeadZone": 0.14000000059604646,
-                    "PressDetect": 0.699999988079071,
-                    "HoldingDuration": 1.0
-                },
-                "Buttons": {
-                    "GeneralButtons": [],
-                    "VRPNButtons": []
-                },
-                "Axes": {
-                    "GeneralAxes": [],
-                    "VRPNAxes": []
-                },
-                "Tracker": {
-                    "VRPNTracker": []
-                },
-                "Controller": [],
-                "Sensor": []
-            },
-            "Command": {
-                "ComboTimeLimit": 0.25,
-                "CountTimeLimit": 0.25,
-                "Separator": "=,_|",
-                "BuiltIn": [],
-                "Custom": []
-            }
-        },
-        {
-            "Path": [
-                "Assets/Scenes/Winter/Winter.unity"
-            ],
-            "ApplyScene": false,
-            "ApplyDevice": false,
-            "ApplyCommand": false,
-            "Scene": {
-                "Attribute": {
-                    "Traveler": true,
-                    "Soul": false,
-                    "Debug": false,
-                    "Tracking": true,
-                    "Stereo": true,
-                    "Test3D": false
-                },
-                "Update": {
-                    "RefreshRate": 0.20000000298023225,
-                    "TargetFrameRate": 120
-                },
-                "Quality": {
-                    "ForceQuality": false,
-                    "Level": 0,
-                    "VSync": 0,
-                    "Rendering": {
-                        "LightCount": 1,
-                        "Anisotropic": "ForcedOn",
-                        "AntiAliasing": 8
-                    },
-                    "Shadows": {
-                        "Type": "Hard",
-                        "Resolution": "High",
-                        "Projection": "CloseFit",
-                        "Distance": 100.0,
-                        "NearPlaneOffset": 1.0,
-                        "Cascades": []
-                    }
-                },
-                "Frame": {
-                    "StartPosition": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "StartRotation": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Transition": {
-                        "Method": "",
-                        "Parameter": "Velocity",
-                        "TransitionFactor": 1.0,
-                        "AccelerationFactor": 0.0,
-                        "DecelerationFactor": 0.0,
-                        "RotationRatio": 45.0,
-                        "FadeColor": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "FadedDuration": 0.10000000149011612,
-                        "UnscaledDeltaTime": false
-                    }
-                },
-                "User": []
-            },
-            "Device": {
-                "GeneralInput": {
-                    "DeadZone": 0.14000000059604646,
-                    "PressDetect": 0.699999988079071,
-                    "HoldingDuration": 1.0
-                },
-                "Buttons": {
-                    "GeneralButtons": [],
-                    "VRPNButtons": []
-                },
-                "Axes": {
-                    "GeneralAxes": [],
-                    "VRPNAxes": []
-                },
-                "Tracker": {
-                    "VRPNTracker": []
-                },
-                "Controller": [],
-                "Sensor": []
-            },
-            "Command": {
-                "ComboTimeLimit": 0.25,
-                "CountTimeLimit": 0.25,
-                "Separator": "=,_|",
-                "BuiltIn": [],
-                "Custom": []
-            }
-        },
-        {
-            "Path": [
-                "Assets/Scenes/Summer/Summer.unity"
-            ],
-            "ApplyScene": false,
-            "ApplyDevice": false,
-            "ApplyCommand": false,
-            "Scene": {
-                "Attribute": {
-                    "Traveler": true,
-                    "Soul": false,
-                    "Debug": false,
-                    "Tracking": true,
-                    "Stereo": true,
-                    "Test3D": false
-                },
-                "Update": {
-                    "RefreshRate": 0.20000000298023225,
-                    "TargetFrameRate": 120
-                },
-                "Quality": {
-                    "ForceQuality": false,
-                    "Level": 0,
-                    "VSync": 0,
-                    "Rendering": {
-                        "LightCount": 1,
-                        "Anisotropic": "ForcedOn",
-                        "AntiAliasing": 8
-                    },
-                    "Shadows": {
-                        "Type": "Hard",
-                        "Resolution": "High",
-                        "Projection": "CloseFit",
-                        "Distance": 100.0,
-                        "NearPlaneOffset": 1.0,
-                        "Cascades": []
-                    }
-                },
-                "Frame": {
-                    "StartPosition": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "StartRotation": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Transition": {
-                        "Method": "",
-                        "Parameter": "Velocity",
-                        "TransitionFactor": 1.0,
-                        "AccelerationFactor": 0.0,
-                        "DecelerationFactor": 0.0,
-                        "RotationRatio": 45.0,
-                        "FadeColor": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "FadedDuration": 0.10000000149011612,
-                        "UnscaledDeltaTime": false
-                    }
-                },
-                "User": []
-            },
-            "Device": {
-                "GeneralInput": {
-                    "DeadZone": 0.14000000059604646,
-                    "PressDetect": 0.699999988079071,
-                    "HoldingDuration": 1.0
-                },
-                "Buttons": {
-                    "GeneralButtons": [],
-                    "VRPNButtons": []
-                },
-                "Axes": {
-                    "GeneralAxes": [],
-                    "VRPNAxes": []
-                },
-                "Tracker": {
-                    "VRPNTracker": []
-                },
-                "Controller": [],
-                "Sensor": []
-            },
-            "Command": {
-                "ComboTimeLimit": 0.25,
-                "CountTimeLimit": 0.25,
-                "Separator": "=,_|",
-                "BuiltIn": [],
-                "Custom": []
-            }
-        },
-        {
-            "Path": [
-                "Assets/WEART_Samples/SampleDemo/Scenes/PlaygroundDemo.unity"
-<<<<<<< HEAD
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-=======
->>>>>>> c8e62fbb0cca246c9e124153aa54769d8cb224a4
-            ],
-            "ApplyScene": false,
-            "ApplyDevice": false,
-            "ApplyCommand": false,
-            "Scene": {
-                "Attribute": {
-                    "Traveler": true,
-                    "Soul": false,
-                    "Debug": false,
-                    "Tracking": true,
-                    "Stereo": true,
-                    "Test3D": false
-                },
-                "Update": {
-                    "RefreshRate": 0.20000000298023225,
-                    "TargetFrameRate": 120
-                },
-                "Quality": {
-                    "ForceQuality": false,
-                    "Level": 0,
-                    "VSync": 0,
-                    "Rendering": {
-                        "LightCount": 1,
-                        "Anisotropic": "ForcedOn",
-                        "AntiAliasing": 8
-                    },
-                    "Shadows": {
-                        "Type": "Hard",
-                        "Resolution": "High",
-                        "Projection": "CloseFit",
-                        "Distance": 100.0,
-                        "NearPlaneOffset": 1.0,
-                        "Cascades": []
-                    }
-                },
-                "Frame": {
-                    "StartPosition": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "StartRotation": [
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "Transition": {
-                        "Method": "",
-                        "Parameter": "Velocity",
-                        "TransitionFactor": 1.0,
-                        "AccelerationFactor": 0.0,
-                        "DecelerationFactor": 0.0,
-                        "RotationRatio": 45.0,
-                        "FadeColor": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "FadedDuration": 0.10000000149011612,
-                        "UnscaledDeltaTime": false
-                    }
-                },
-                "User": []
-            },
-            "Device": {
-                "GeneralInput": {
-                    "DeadZone": 0.14000000059604646,
-                    "PressDetect": 0.699999988079071,
-                    "HoldingDuration": 1.0
-                },
-                "Buttons": {
-                    "GeneralButtons": [],
-                    "VRPNButtons": []
-                },
-                "Axes": {
-                    "GeneralAxes": [],
-                    "VRPNAxes": []
-                },
-                "Tracker": {
-                    "VRPNTracker": []
-                },
-                "Controller": [],
-                "Sensor": []
-            },
-            "Command": {
-                "ComboTimeLimit": 0.25,
-                "CountTimeLimit": 0.25,
-                "Separator": "=,_|",
-                "BuiltIn": [],
-                "Custom": []
-            }
-        }
-    ]
+    "ScenesInBuild": []
 }

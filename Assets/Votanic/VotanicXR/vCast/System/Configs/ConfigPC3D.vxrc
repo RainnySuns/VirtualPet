@@ -1,6 +1,6 @@
 {
   "Format": "Config",
-  "Version": "2020.8.8",
+  "Version": "2020.9.7",
   "System": {
     "Type": "PC",
     "ApplicationDirectory": "%VOTANIC_PATH%/Apps/",
@@ -94,6 +94,7 @@
         "Sensor": "Sensor",
         "Tracker": [ "VirtualTracker0" ],
         "EnableTracking": true,
+        "EnableScreenWarning": true,
         "TrackPosition": true,
         "TrackRotation": true,
         "Position": [ 0, 1.5, 0 ],
@@ -114,6 +115,7 @@
         "Sensor": "Null",
         "Tracker": [ "Null" ],
         "EnableTracking": true,
+        "EnableScreenWarning": true,
         "TrackPosition": true,
         "TrackRotation": true,
         "Position": [ 0, -0.25, 0.4 ],

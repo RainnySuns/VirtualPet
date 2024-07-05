@@ -27,7 +27,7 @@ public class ShootPainter : MonoBehaviour{
     void Update()
     {
 
-        //click = mouseSingleClick ? vGear.Cmd.Received("shoot") : vGear.Cmd.Received("isshoot");
+        //click = mouseSingleClick ? vGear.Cmd.Received("Pick11") : vGear.Cmd.Received("ishoot");
         click = mouseSingleClick ? Input.GetMouseButtonDown(0) : Input.GetMouseButton(0);
 
         if (click)

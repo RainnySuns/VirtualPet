@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Votanic.vMedia.MediaPlayer;
+using Votanic.vXR;
 using Votanic.vXR.vCast;
 using Votanic.vXR.vGear;
 using Votanic.vXR.vGear.Networking;
@@ -22,6 +23,7 @@ public class vGearTemp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vGear.Cmd.AddAction(OnReceivedCommand);
         vGear.Cmd.Send("Custom");
     }
 
@@ -65,6 +67,12 @@ public class vGearTemp : MonoBehaviour
 
         //vGear.Frame.Transform(targetPos, targetRot);
     }
+
+    void OnDestroy()
+    {
+        vGear.Cmd.RemoveAction(OnReceivedCommand);
+    }
+
     void Open()
     {
         inputPanel.Open(vGear.user.TransformPoint(0, 1.25f, 1), vGear.user.eulerAngles + new Vector3(30, 0, 0));
@@ -73,6 +81,11 @@ public class vGearTemp : MonoBehaviour
         inputText.Select();
         inputText.MoveTextEnd(true);
         //vGear.controller.SetTool("DrumStick");
+    }
+
+    void OnReceivedCommand(string command, float value = 1, int target = -1, int interactor = -1, InteractorType type = InteractorType.None)
+    {
+        Debug.Log(command);
     }
 
     public void Send()

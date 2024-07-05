@@ -348,6 +348,11 @@
             Return true if the tracking of entity is enable. <br></br> 當實體定位啟用時傳回 true。
             </summary>
         </member>
+        <member name="P:Votanic.vXR.vCast.Core.Entity.enableScreenWarning">
+            <summary>
+            Return true if the tracking of entity is enable. <br></br> 當實體定位啟用時傳回 true。
+            </summary>
+        </member>
         <member name="P:Votanic.vXR.vCast.Core.Entity.isTrackPosition">
             <summary>
             Track position of tracker if true. <br></br> 當 true 時追蹤定位器位置 。
@@ -486,6 +491,14 @@
             Enable or disable the tracking function of the entity.
             <br></br> 啟用或停用實體的定位功能。
             <para> EnableTracking(true) </para>
+            </summary>
+            <param name="enable"> Enable if true <br></br> 當 true 時啟用 </param>
+        </member>
+        <member name="M:Votanic.vXR.vCast.Core.Entity.EnableScreenWarning(System.Boolean)">
+            <summary>
+            Enable or disable the screen warning function of the entity.
+            <br></br> 啟用或停用實體的屏幕警告。
+            <para> EnableScreenWarning(true) </para>
             </summary>
             <param name="enable"> Enable if true <br></br> 當 true 時啟用 </param>
         </member>
@@ -654,6 +667,14 @@
             <param name="mountOjbect"> Target object <br></br> 目標物件 </param>
             <param name="parent"> Parent to screen if true <br></br> 當 true 時將屏幕設為母體 </param>
         </member>
+        <member name="M:Votanic.vXR.vCast.Core.Screen.SetAsInteractables(System.Boolean)">
+            <summary>
+            Enable or disable screen interaction.
+            <br></br> 啟動或關閉屏幕的互動。
+            <para> SetAsInteractables(true) </para>
+            </summary>
+            <param name="enable"> Enable if true <br></br> 當 true 時啟動 </param>
+        </member>
         <member name="T:Votanic.vXR.vCast.Core.SystemType">
             <summary>
             Operation environment.
@@ -800,14 +821,9 @@
             Develop without Unity XR. <br></br> 不支援 Unity XR 的開發。
             </summary>
         </member>
-        <member name="F:Votanic.vXR.vCast.Core.XRSupport.Standard">
+        <member name="F:Votanic.vXR.vCast.Core.XRSupport.Enable">
             <summary>
-            Develop with the original system. <br></br> 以原始的系統進行開發。
-            </summary>
-        </member>
-        <member name="F:Votanic.vXR.vCast.Core.XRSupport.RoleSystem">
-            <summary>
-            Develop with OpenVR role system. <br></br> 以 OpenVR 角色系統進行開發。
+            Develop with Unity XR. <br></br> 支援 Unity XR 的開發。
             </summary>
         </member>
         <member name="T:Votanic.vXR.vCast.Core.BatchType">
@@ -1113,6 +1129,9 @@
             <summary> </summary>
         </member>
         <member name="F:Votanic.vXR.vCast.Core.SettingWandRay.ApplyLaserPointer">
+            <summary> </summary>
+        </member>
+        <member name="F:Votanic.vXR.vCast.Core.SettingWandRay.ApplyCursor">
             <summary> </summary>
         </member>
         <member name="F:Votanic.vXR.vCast.Core.SettingWandRay.Length">
@@ -2135,6 +2154,9 @@
         <member name="F:Votanic.vXR.vCast.Core.ConfigEntity.EnableTracking">
             <summary> </summary>
         </member>
+        <member name="F:Votanic.vXR.vCast.Core.ConfigEntity.EnableScreenWarning">
+            <summary> </summary>
+        </member>
         <member name="F:Votanic.vXR.vCast.Core.ConfigEntity.TrackPosition">
             <summary> </summary>
         </member>
@@ -2369,6 +2391,11 @@
             Decide to display UI or not. The preformance may be dropped down if enabled. <br></br> 決定是否顯示使用者介面，啟動後性能可能會下降。
             </summary>
         </member>
+        <member name="F:Votanic.vXR.vCast.vCast_Dome.fov">
+            <summary>
+            Field of view of fish eye. <br></br> 魚眼視角角度。
+            </summary>
+        </member>
         <member name="F:Votanic.vXR.vCast.vCast_Dome.instance">
             <summary>
             
@@ -2506,6 +2533,7 @@
             <param name="position"> Relative position on sensor <br></br> 在感應器的相對位置 </param>
             <param name="rotation"> Relative euler angles on sensor <br></br> 在感應器的相對角度 </param>
         </member>
+        <!-- Badly formed XML comment ignored for member "E:Votanic.vXR.vCast.IO.CommandHandler.OnCommandReceived" -->
         <member name="T:Votanic.vXR.vCast.IO.InputType">
             <summary>
             Support input type of command.
@@ -3044,6 +3072,11 @@
             Show the ray ring at the end of wand. <br></br> 在操縱桿的終點顯示射線環。
             </summary>
         </member>
+        <member name="F:Votanic.vXR.vCast.WandRay.applyCursor">
+            <summary>
+            Show the cursor at the end of wand. <br></br> 在操縱桿的終點顯示鼠標。
+            </summary>
+        </member>
         <member name="F:Votanic.vXR.vCast.WandRay.length">
             <summary>
             Wand ray length. <br></br> 操縱桿射線長度。
@@ -3108,6 +3141,11 @@
         <member name="F:Votanic.vXR.vCast.vCast_Wand.rayRing">
             <summary>
             Ray ring object. <br></br> 射線環物件。
+            </summary>
+        </member>
+        <member name="F:Votanic.vXR.vCast.vCast_Wand.cursor">
+            <summary>
+            Cursor object. <br></br> 鼠標物件。
             </summary>
         </member>
         <member name="F:Votanic.vXR.vCast.vCast_Wand.ray">
@@ -3444,6 +3482,16 @@
             All layers of the XR system. <br></br> XR 系統中的各個層級。
             </summary>
         </member>
+        <member name="F:Votanic.vXR.vCast.vCast.applyUnityGravity">
+            <summary>
+            Apply gravity value from Unity. <br></br> 使用 Unity 提供的重力值。
+            </summary>
+        </member>
+        <member name="F:Votanic.vXR.vCast.vCast.customGravity">
+            <summary>
+            Custom gravity value. <br></br> 自定義重力值。
+            </summary>
+        </member>
         <member name="F:Votanic.vXR.vCast.vCast.essential">
             <summary>
             Essential elements to initialize the XR system. <br></br> XR 系統初始化的必須元素。
@@ -3756,6 +3804,14 @@
             <para> EnableMobileGazeInteraction(true) </para>
             </summary>
             <param name="gazeDuration"> Duration for the gaze action <br></br> 凝視的所需時間 </param>
+        </member>
+        <member name="M:Votanic.vXR.vCast.vCast.EnableScreenCursorInteraction(System.Boolean)">
+            <summary>
+            Enable screen interaction.
+            <br></br> 啟動屏幕鼠標互動模式。
+            <para> EnableScreenCursorInteraction(true) </para>
+            </summary>
+            <param name="enable"> Enable the screen interaction mode <br></br> 啟動屏幕鼠標互動模式 </param>
         </member>
         <member name="M:Votanic.vXR.vCast.vCast.GetTransforms(UnityEngine.Transform,System.Boolean)">
             <summary>
@@ -4574,6 +4630,18 @@
             <br></br> 輸入輸出系統中的最高級別的功能，用作處理指令。
             </summary>
         </member>
+        <member name="M:Votanic.vXR.vCast.vCast.Cmd.AddAction(System.Action{System.String,System.Single,System.Int32,System.Int32,Votanic.vXR.InteractorType})">
+            <summary>
+            Add an action to command handler.
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:Votanic.vXR.vCast.vCast.Cmd.RemoveAction(System.Action{System.String,System.Single,System.Int32,System.Int32,Votanic.vXR.InteractorType})">
+            <summary>
+            Add an action to command handler.
+            </summary>
+            <param name="action"></param>
+        </member>
         <member name="M:Votanic.vXR.vCast.vCast.Cmd.Send(System.String,System.Single,System.Int32,System.Int32,Votanic.vXR.InteractorType)">
             <summary>
             Send a command to the command handler.
@@ -4947,7 +5015,7 @@
             <br></br> 輸入輸出系統中的 VRPN 裝置類型處理器。
             </summary>
         </member>
-        <member name="P:Votanic.vXR.vCast.vCast.Input.OpenVR">
+        <member name="P:Votanic.vXR.vCast.vCast.Input.UnityXR">
             <summary>
             The handler of OpenVR device type in IO System.
             <br></br> 輸入輸出系統中的 OpenVR 裝置類型處理器。
@@ -7043,6 +7111,12 @@
             <para> SetTool("Wand") </para>
             </summary>
             <param name="tool"> Tool name <br></br> 工具名稱 </param>
+        </member>
+        <member name="M:Votanic.vXR.vCast.vCast_Controller.SetPreviousTool">
+            <summary>
+            Change back to previous tool.
+            <br></br> 轉回先前用的工具。
+            </summary>
         </member>
         <member name="M:Votanic.vXR.vCast.vCast_Controller.SetTool(System.Int32)">
             <summary>

@@ -1,6 +1,6 @@
 {
     "Format": "Config",
-    "Version": "2020.8.8",
+    "Version": "2020.9.7",
     "System": {
         "Type": "Panoramic",
         "ApplicationDirectory": "%VOTANIC_PATH%/Apps/",
@@ -155,6 +155,7 @@
                     "Null"
                 ],
                 "EnableTracking": true,
+				"EnableScreenWarning": true,
                 "TrackPosition": true,
                 "TrackRotation": true,
                 "PosOffset": [
@@ -201,6 +202,7 @@
                     "Null"
                 ],
                 "EnableTracking": true,
+				"EnableScreenWarning": true,
                 "TrackPosition": true,
                 "TrackRotation": true,
                 "PosOffset": [

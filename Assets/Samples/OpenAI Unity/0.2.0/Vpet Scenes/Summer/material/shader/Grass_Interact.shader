@@ -26,7 +26,7 @@ Shader "Roystan/Grass_Interact"
 	CGINCLUDE
 	#include "UnityCG.cginc"
 	#include "Autolight.cginc"
-	#include "D:\Unity\Test 2020\Assets\Scenes\Summer\material\shader\CustomTessellation.cginc"
+	#include ".\CustomTessellation.cginc"
 	#include "Lighting.cginc"
 	#pragma multi_compile _SHADOWS_SCREEN
 	#pragma multi_compile_fwdbase_fullforwardshadows

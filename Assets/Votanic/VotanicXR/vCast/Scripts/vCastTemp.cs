@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Votanic.vXR;
 using Votanic.vXR.vCast;
+using Votanic.vXR.vGear;
 
 public class vCastTemp : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
+        vCast.Cmd.AddAction(OnReceivedCommand);
         vCast.Cmd.Send("Custom");
     }
 
@@ -32,6 +35,15 @@ public class vCastTemp : MonoBehaviour
         }
 
         //vCast.Frame.Transform(targetPos, targetRot);
+    }
+    void OnDestroy()
+    {
+        vCast.Cmd.RemoveAction(OnReceivedCommand);
+    }
+
+    void OnReceivedCommand(string command, float value = 1, int target = -1, int interactor = -1, InteractorType type = InteractorType.None)
+    {
+        Debug.Log(command);
     }
 
     void CustomMethod()

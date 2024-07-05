@@ -1,6 +1,6 @@
 {
     "Format": "Config",
-    "Version": "2020.8.8",
+    "Version": "2020.9.8",
     "System": {
         "Type": "HMD",
         "ApplicationDirectory": "%VOTANIC_PATH%/Apps/",
@@ -230,7 +230,7 @@
                 }
             },
             {
-                "Name": "Hand",
+                "Name": "HandTracker",
                 "Parent": "User",
                 "Position": [
                     0.0,
@@ -242,9 +242,10 @@
                     0.0,
                     0.0
                 ],
-                "Controller": "Controller",
+                "Controller": "Null",
                 "Sensor": "Null",
                 "Tracker": [
+                    "Hand.Tracker",
                     "Hand.Tracker"
                 ],
                 "EnableTracking": true,
@@ -276,7 +277,7 @@
                 }
             },
             {
-                "Name": "Hand2",
+                "Name": "Hand2Tracker",
                 "Parent": "User",
                 "Position": [
                     0.0,
@@ -288,12 +289,106 @@
                     180.0,
                     0.0
                 ],
-                "Controller": "Controller2",
+                "Controller": "Null",
                 "Sensor": "Null",
                 "Tracker": [
                     "Hand2.Tracker"
                 ],
                 "EnableTracking": true,
+                "TrackPosition": true,
+                "TrackRotation": true,
+                "PosOffset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "RotOffset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "LostTracking": {
+                    "LostTransform": "Idle",
+                    "Retry": 100,
+                    "CustomPosition": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "CustomRotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            {
+                "Name": "Hand",
+                "Parent": "HandTracker",
+                "Position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    30.0,
+                    0.0,
+                    0.0
+                ],
+                "Controller": "Controller",
+                "Sensor": "Null",
+                "Tracker": [
+                    "Null",
+                    "Null"
+                ],
+                "EnableTracking": false,
+                "TrackPosition": true,
+                "TrackRotation": true,
+                "PosOffset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "RotOffset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "LostTracking": {
+                    "LostTransform": "Idle",
+                    "Retry": 100,
+                    "CustomPosition": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "CustomRotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            {
+                "Name": "Hand2",
+                "Parent": "Hand2Tracker",
+                "Position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Rotation": [
+                    30.0,
+                    0.0,
+                    0.0
+                ],
+                "Controller": "Controller2",
+                "Sensor": "Null",
+                "Tracker": [
+                    "Null",
+                    "Null"
+                ],
+                "EnableTracking": false,
                 "TrackPosition": true,
                 "TrackRotation": true,
                 "PosOffset": [
