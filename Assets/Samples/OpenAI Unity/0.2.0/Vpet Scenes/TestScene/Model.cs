@@ -5,12 +5,10 @@ using UnityEngine.Networking;
 
 public class Model : MonoBehaviour
 {
-
-
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(DownloadFile("http://cave01@192.108.0.114/getfile"));
+        
     }
 
     // Update is called once per frame
@@ -38,7 +36,9 @@ public class Model : MonoBehaviour
                 filename = "default_filename.bvh";
             }
 
-            System.IO.File.WriteAllBytes("BVHFile/" + filename, request.downloadHandler.data);
+            System.IO.File.WriteAllBytes("Assets/Samples/OpenAI Unity/0.2.0/Vpet Scenes/TestScene/BVHFile/" + filename, request.downloadHandler.data);
+
+            BVHDriver.Instance.Filename = filename;
             Debug.Log("File successfully downloaded and saved to BVHFile/" + filename);
         }
     }

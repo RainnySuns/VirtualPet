@@ -7,6 +7,7 @@ using UnityEngine;
 public class BonemapReader
 {
     public static BVHDriver.BoneMap[] bonemaps;
+    public static TestBVH.BoneMap[] boneMaps;
 
     public static void Read(string filename)
     {
@@ -29,6 +30,29 @@ public class BonemapReader
             }
         }
         bonemaps = maplist.ToArray();
+    }
+
+    public static void ReadBone(string filename)
+    {
+        List<TestBVH.BoneMap> maplist = new List<TestBVH.BoneMap>();
+        using (StreamReader sr = new StreamReader(filename))
+        {
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] words = line.Split(' ');
+                if (words.Length != 2)
+                {
+                    Debug.Log("Bonesmap.txt format error");
+                    continue;
+                }
+                TestBVH.BoneMap tb = new TestBVH.BoneMap();
+                tb.bvh_name = words[0];
+                tb.humanoid_bone = match(words[1]);
+                maplist.Add(tb);
+            }
+        }
+        boneMaps = maplist.ToArray();
     }
 
     public static HumanBodyBones match(string s)

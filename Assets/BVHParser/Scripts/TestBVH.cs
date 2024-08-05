@@ -1,32 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
 
-public class BVHDriver : MonoBehaviour
+public class TestBVH : MonoBehaviour
 {
-
-    private static BVHDriver _instance;
-    public static BVHDriver Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                Debug.LogError("BVHDriver instance is not initialized.");
-            }
-            return _instance;
-        }
-    }
-
-    void Awake()
-    {
-        _instance = this;
-        DontDestroyOnLoad(this.gameObject); // Optional
-    }
-
     [Header("Loader settings")]
     [Tooltip("This is the target avatar for which the animation should be loaded. Bone names should be identical to those in the BVH file and unique. All bones should be initialized with zero rotations. This is usually the case for VRM avatars.")]
     public Animator targetAvatar;
@@ -34,10 +15,12 @@ public class BVHDriver : MonoBehaviour
     [Tooltip("This is the path to the file which describes Bonemaps between unity and bvh.")]
     public string bonemapPath = @"Assets\BVHParser\Resources\Bonemaps.txt";
     [Tooltip("This is the path to the BVH file that should be loaded. Bone offsets are currently being ignored by this loader.")]
+    private string directoryPath = "Assets/Samples/OpenAI Unity/0.2.0/Vpet Scenes/TestScene/BVHFile";
+    private List<string> bvhFiles = new List<string>();
+
 
     private string _filename;
 
-    // Filename 属性
     public string Filename
     {
         get { return _filename; }
@@ -53,7 +36,7 @@ public class BVHDriver : MonoBehaviour
                 bvhHireachy = bp.getHierachy();
 
                 anim = targetAvatar.GetComponent<Animator>();
-
+                
                 frameIdx = 0;
             }
         }
@@ -79,7 +62,7 @@ public class BVHDriver : MonoBehaviour
     {
         string bvhData = File.ReadAllText(Filename);
         Debug.Log(Filename);
-        bp = new BVHParser(bvhData);        
+        bp = new BVHParser(bvhData);
         frameRate = 1f / bp.frameTime;
     }
 
@@ -95,8 +78,9 @@ public class BVHDriver : MonoBehaviour
     {
         // set mapping between bvh_name and humanBodyBones
         _filename = "Assets/Samples/OpenAI Unity/0.2.0/Vpet Scenes/TestScene/BVHFile/sample0_repeat0_len196_walking_0715175124_ik.bvh";
-        BonemapReader.Read(bonemapPath);
-        bonemaps = BonemapReader.bonemaps;
+        
+        BonemapReader.ReadBone(bonemapPath);
+        bonemaps = BonemapReader.boneMaps;
         
         parseFile();
         Application.targetFrameRate = (Int16)frameRate;
@@ -123,10 +107,14 @@ public class BVHDriver : MonoBehaviour
         }
         scaleRatio = unity_leftleg / bvh_leftleg;
         frameIdx = 0;
+        LoadBVHFiles();
+
+        StartCoroutine(CycleFiles());
     }
 
     private void Update()
     {
+
         Dictionary<string, Quaternion> currFrame = bp.getKeyFrame(frameIdx);
         if (frameIdx < bp.frames - 1)
         {
@@ -169,6 +157,37 @@ public class BVHDriver : MonoBehaviour
             Debug.DrawLine(bvhPos[bname]*scaleRatio, bvhPos[bvhHireachy[bname]]*scaleRatio, color);            
         }
     }
+    void LoadBVHFiles()
+    {
+        // Check if directory exists
+        if (Directory.Exists(directoryPath))
+        {
+            foreach (string file in Directory.GetFiles(directoryPath, "*.bvh"))
+            {
+                bvhFiles.Add(file);
+                Debug.Log("Found BVH file: " + file);
+            }
+        }
+        else
+        {
+            Debug.LogError("Directory does not exist: " + directoryPath);
+        }
+    }
+
+    IEnumerator CycleFiles()
+    {
+        while (true)
+        {
+            foreach (string file in bvhFiles)
+            {
+                Filename = file;
+                Debug.Log("Current BVH file: " + file);
+                yield return new WaitForSeconds(5); // Wait for 5 seconds
+            }
+        }
+    }
+
+
 
 }
 

@@ -18,6 +18,7 @@ namespace Samples.Whisper
         private bool isRecording;
         private float time;
         private OpenAIApi openai = new OpenAIApi();
+        public SendTextData send;
 
         private void Start()
         {
@@ -74,6 +75,7 @@ namespace Samples.Whisper
 
             progressBar.fillAmount = 0;
             message.text = res.Text;
+            send.DeliverText(res.Text);
             recordButton.enabled = true;
         }
 
